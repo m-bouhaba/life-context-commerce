@@ -4,7 +4,7 @@ const products = [
     id: 1,
     name: "Ergonomic Office Chair",
     price: 199,
-    image: "/images/home-office-chair.jpg",
+    image: "/images/chair.jpeg",
     context: "home-office",
     category: "Furniture",
     description: "Comfortable ergonomic chair designed for long working hours."
@@ -13,7 +13,7 @@ const products = [
     id: 2,
     name: "Minimal Desk Lamp",
     price: 45,
-    image: "/images/desk-lamp.jpg",
+    image: "/images/chair.jpeg",
     context: "home-office",
     category: "Lighting",
     description: "Modern LED desk lamp with adjustable brightness."
@@ -24,7 +24,7 @@ const products = [
     id: 3,
     name: "Travel Backpack",
     price: 89,
-    image: "/images/travel-backpack.jpg",
+    image: "/images/chair.jpeg",
     context: "travel",
     category: "Accessories",
     description: "Lightweight backpack ideal for short and long trips."
@@ -33,7 +33,7 @@ const products = [
     id: 4,
     name: "Noise Cancelling Headphones",
     price: 129,
-    image: "/images/noise-headphones.jpg",
+    image: "/images/chair.jpeg",
     context: "travel",
     category: "Electronics",
     description: "Enjoy your journey with immersive sound and noise cancellation."
