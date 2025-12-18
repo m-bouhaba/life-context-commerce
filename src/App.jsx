@@ -4,6 +4,7 @@ import Wishlist from "./pages/Wishlist";
 import "./app.css"
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import Catalogue from "./pages/Catalogue";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<Catalogue />} />
         {/* <Route path="/catalogue" element={<Catalogue />} /> */}
         {/* <Route path="/wishlist" element={<Wishlist />} /> */}
       </Routes>

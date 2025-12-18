@@ -1,83 +1,115 @@
 const products = [
-  // 🏠 HOME OFFICE
+  // 🏠 HOME OFFICE / NEW JOB
   {
-    id: 1,
+    id: "prod-001",
     name: "Ergonomic Office Chair",
     price: 199,
-    image: "/images/chair.jpeg",
-    context: "home-office",
+    image: "/images/chair.jpg",
+    contexts: ["home-office", "new-job"],
     category: "Furniture",
-    description: "Comfortable ergonomic chair designed for long working hours."
+    tags: ["ergonomic", "office", "comfort"],
+    description:
+      "Ergonomic office chair designed to provide comfort and support during long working hours.",
+    rating: 4.6,
+    inStock: true,
   },
   {
-    id: 2,
+    id: "prod-002",
     name: "Minimal Desk Lamp",
     price: 45,
-    image: "/images/chair.jpeg",
-    context: "home-office",
+    image: "/images/desk-lamp.jpg",
+    contexts: ["home-office", "new-job"],
     category: "Lighting",
-    description: "Modern LED desk lamp with adjustable brightness."
+    tags: ["minimal", "led", "desk"],
+    description:
+      "Modern LED desk lamp with adjustable brightness for focused work.",
+    rating: 4.4,
+    inStock: true,
   },
 
   // ✈️ TRAVEL
   {
-    id: 3,
+    id: "prod-003",
     name: "Travel Backpack",
     price: 89,
-    image: "/images/chair.jpeg",
-    context: "travel",
+    image: "/images/travel-backpack.jpg",
+    contexts: ["travel"],
     category: "Accessories",
-    description: "Lightweight backpack ideal for short and long trips."
+    tags: ["travel", "backpack", "lightweight"],
+    description:
+      "Lightweight and durable backpack, perfect for short trips or frequent travel.",
+    rating: 4.7,
+    inStock: true,
   },
   {
-    id: 4,
+    id: "prod-004",
     name: "Noise Cancelling Headphones",
     price: 129,
-    image: "/images/chair.jpeg",
-    context: "travel",
+    image: "/images/headphones.jpg",
+    contexts: ["travel", "home-office"],
     category: "Electronics",
-    description: "Enjoy your journey with immersive sound and noise cancellation."
+    tags: ["audio", "noise-cancelling", "wireless"],
+    description:
+      "Wireless noise cancelling headphones for immersive sound on the go.",
+    rating: 4.8,
+    inStock: true,
   },
 
   // 📦 MOVING
   {
-    id: 5,
+    id: "prod-005",
     name: "Storage Organizer Set",
     price: 59,
     image: "/images/storage-organizer.jpg",
-    context: "moving",
-    category: "Home",
-    description: "Perfect solution for organizing your new space."
+    contexts: ["moving"],
+    category: "Home Organization",
+    tags: ["storage", "organizer", "home"],
+    description:
+      "Versatile storage organizer set to help you settle into your new space.",
+    rating: 4.3,
+    inStock: true,
   },
   {
-    id: 6,
+    id: "prod-006",
     name: "Essential Tool Kit",
     price: 75,
     image: "/images/tool-kit.jpg",
-    context: "moving",
+    contexts: ["moving"],
     category: "Tools",
-    description: "All the basic tools you need when moving into a new home."
+    tags: ["tools", "home", "diy"],
+    description:
+      "Essential toolkit with all the basic tools needed for home setup.",
+    rating: 4.5,
+    inStock: true,
   },
 
   // 💼 NEW JOB
   {
-    id: 7,
+    id: "prod-007",
     name: "Professional Laptop Bag",
     price: 110,
     image: "/images/laptop-bag.jpg",
-    context: "new-job",
-    category: "Work",
-    description: "Sleek and professional bag suitable for everyday work."
+    contexts: ["new-job", "travel"],
+    category: "Work Accessories",
+    tags: ["work", "laptop", "professional"],
+    description:
+      "Sleek and professional laptop bag suitable for everyday work and commuting.",
+    rating: 4.6,
+    inStock: true,
   },
   {
-    id: 8,
-    name: "Smart Notebook",
+    id: "prod-008",
+    name: "Smart Reusable Notebook",
     price: 39,
     image: "/images/smart-notebook.jpg",
-    context: "new-job",
+    contexts: ["new-job"],
     category: "Stationery",
-    description: "Reusable notebook that blends handwriting with digital notes."
-  }
+    tags: ["notes", "productivity", "eco-friendly"],
+    description:
+      "Reusable smart notebook that combines handwriting with digital organization.",
+    rating: 4.2,
+    inStock: true,
+  },
 ];
 
 export default products;
