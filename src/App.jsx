@@ -3,12 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Wishlist from "./pages/Wishlist";
 import "./app.css"
 import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     <BrowserRouter>
-      {/* <Navbar />
-      <CartSidebar /> */}
+      <Navbar />
+    {/*   <CartSidebar /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />

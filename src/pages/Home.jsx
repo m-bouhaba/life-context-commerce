@@ -15,8 +15,8 @@ export default function Home() {
             No more endless browsing – just what matters for your lifestyle.
           </p>
           <div className="hero-buttons">
-            <button className="cta-button">Start Shopping</button>
-            <button className="secondary-button">Discover Contexts</button>
+            <button className="cta-button">Choose Your Situation</button>
+            <button className="secondary-button">Learn More</button>
           </div>
         </div>
 
@@ -32,14 +32,47 @@ export default function Home() {
       </section>
 
       {/* ---------------- Products Grid ---------------- */}
-      {/* <section className="products-section">
+      {/* <section className="grid">
         <h2>Our Products</h2>
-        <div className="products-grid">
+        <div className="product-card">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section> */}
+    <section className="life-mode-section">
+  <div className="container">
+    <h2>What's Your Current Life Mode?</h2>
+    <p className="subtitle">
+      Choose the situation that best describes where you are right now
+    </p>
+
+    <div className="situations">
+  
+      <div className="situation-card">
+        <h3>Starting a New Job</h3>
+        <p>Essential items to make a great first impression and stay organized</p>
+        <button className="explore-btn">Explore products →</button>
+      </div>
+
+      
+      <div className="situation-card">
+        <h3>Moving to a New Place</h3>
+        <p>Must-have items to set up your new space quickly and efficiently</p>
+        <button className="explore-btn">Explore products →</button>
+      </div>
+
+    
+      <div className="situation-card">
+        <h3>Traveling Frequently</h3>
+        <p>Travel essentials to stay organized and comfortable on the go</p>
+        <button className="explore-btn">Explore products →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     </div>
   );

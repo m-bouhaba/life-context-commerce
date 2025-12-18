@@ -7,7 +7,7 @@ import {
 import { Heart, ShoppingCart } from "lucide-react";
 
 export default function ProductCard({ product }) {
-  console.log("helloo");
+  console.log("product");
   
   const dispatch = useDispatch();
   const wishlistItems = useSelector((state) => state.wishlist.items);
