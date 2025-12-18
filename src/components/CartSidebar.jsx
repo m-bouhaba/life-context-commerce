@@ -45,7 +45,7 @@ export default function CartSidebar({ isOpen, onClose }) {
                 <div key={item.id} className="cart-item">
                   <img src={item.image} alt={item.title} />
                   <div className="item-info">
-                    <p className="title">{item.title}</p>
+                    <p className="title">{item.name}</p>
                     <p className="price">{item.price} MAD</p>
                     <div className="quantity-controls">
                       <button onClick={() => dispatch(decreaseQuantity(item.id))}>-</button>

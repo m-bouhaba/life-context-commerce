@@ -7,50 +7,41 @@ import {
 import { Heart, ShoppingCart } from "lucide-react";
 
 export default function ProductCard({ product }) {
-  console.log("product");
-  
   const dispatch = useDispatch();
-  const wishlistItems = useSelector((state) => state.wishlist.items);
-
-  const isInWishlist = wishlistItems.some(
-    (item) => item.id === product.id
-  );
 
   return (
     <div className="product-card">
-      {/* Wishlist icon */}
-      <button
-        className={`wishlist-btn ${isInWishlist ? "active" : ""}`}
-        onClick={() =>
-          isInWishlist
-            ? dispatch(removeFromWishlist(product.id))
-            : dispatch(addToWishlist(product))
-        }
-      >
-        <Heart size={20} />
-      </button>
+      {/* Image */}
+      <div className="product-image">
+        <img src={product.image} alt={product.name} />
 
-      {/* Product image */}
-      <img
-        src={product.image}
-        alt={product.name}
-        className="product-image"
-      />
-
-      {/* Product info */}
-      <div className="product-info">
-        <h3>{product.name}</h3>
-        <p className="price">${product.price}</p>
+        {/* Wishlist */}
+        <button
+          className="wishlist-btn"
+          aria-label="Add to wishlist"
+          onClick={() => console.log("wishlist", product.id)}
+        >
+          <Heart size={18} />
+        </button>
       </div>
 
-      {/* Add to cart */}
-      <button
-        className="add-to-cart"
-        onClick={() => dispatch(addToCart(product))}
-      >
-        <ShoppingCart size={18} />
-        Add to Cart
-      </button>
+      {/* Info */}
+      <div className="product-info">
+        <h3>{product.name}</h3>
+        {/* <p className="product-category">{product.category}</p> */}
+        <div className="product-footer">
+          <span className="product-price">${product.price}</span>
+
+          {/* Add to cart */}
+          <button
+            className="add-to-cart-btn"
+            aria-label="Add to cart"
+            onClick={() => dispatch(addToCart(product))}
+          >
+            <ShoppingCart size={18} />
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

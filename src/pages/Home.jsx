@@ -35,11 +35,11 @@ export default function Home() {
       {/* ---------------- Products Grid ---------------- */}
       {/* <section className="grid">
         <h2>Our Products</h2>
-        <div className="product-card">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        <div className="grid">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+    </div>
       </section> */}
     <section className="life-mode-section">
   <div className="container">
