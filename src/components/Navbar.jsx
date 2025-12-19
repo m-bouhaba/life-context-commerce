@@ -1,10 +1,17 @@
 import React from 'react'
 import { useState } from "react";
 import CartSidebar from './CartSidebar';
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
 
   const [openCart, setOpenCart] = useState(false);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity );
+  const wishlistCount = useSelector(
+    (state) => state.wishlist.items.length
+  );
+   const navigate = useNavigate();
 
   return (
     <nav className="navbar">
@@ -26,7 +33,7 @@ export default function Navbar() {
     </button>
 
   
-    <button className="icon-btn" aria-label="Wishlist">
+    <button className="icon-btn" aria-label="Wishlist" onClick={() => navigate("/wishlist")}>
       <svg
         className="nav-icon heart"
         xmlns="http://www.w3.org/2000/svg"
@@ -41,15 +48,21 @@ export default function Navbar() {
           strokeLinejoin="round"
         />
       </svg>
+      {wishlistCount > 0 && (
+          <span className="badge">{wishlistCount}</span>
+        )}
     </button>
 
   
-    <button className="icon-btn" aria-label="Cart" onClick={() => setOpenCart(true)}>
+    <button className="icon-btn cart-btn" aria-label="Cart" onClick={() => setOpenCart(true)}>
       <img
         src="/images/cart.png"
         alt="Cart"
         className="nav-icon-img"
       />
+       {totalQuantity > 0 && (
+        <span className="cart-badge">{totalQuantity}</span>
+      )}
     </button>
   </div>
   <CartSidebar isOpen={openCart} onClose={() => setOpenCart(false)} />

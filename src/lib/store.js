@@ -8,3 +8,9 @@ export const store = configureStore({
     wishlist: wishlistReducer,
   },
 });
+
+store.subscribe(() => {
+  const { cart, wishlist } = store.getState();
+  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+});

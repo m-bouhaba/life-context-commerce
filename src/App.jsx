@@ -15,8 +15,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalogue />} />
+        <Route path="/wishlist" element={<Wishlist />} /> 
         {/* <Route path="/catalogue" element={<Catalogue />} /> */}
-        {/* <Route path="/wishlist" element={<Wishlist />} /> */}
       </Routes>
     </BrowserRouter>
   );

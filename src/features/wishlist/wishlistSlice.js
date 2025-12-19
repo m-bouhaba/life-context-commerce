@@ -1,27 +1,43 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Charger wishlist depuis localStorage
+const loadWishlistFromStorage = () => {
+  try {
+    const data = localStorage.getItem("wishlist");
+    return data ? JSON.parse(data) : { items: [] };
+  } catch {
+    return { items: [] };
+  }
+};
+
+const initialState = loadWishlistFromStorage();
+
 const wishlistSlice = createSlice({
   name: "wishlist",
-  initialState: {
-    items: [],
-  },
+  initialState,
   reducers: {
-    addToWishlist(state, action) {
-      const item = action.payload;
-      const exists = state.items.find((p) => p.id === item.id);
-      if (!exists) {
-        state.items.push(item);
+    toggleWishlist(state, action) {
+      const product = action.payload;
+      const exists = state.items.find((item) => item.id === product.id);
+
+      if (exists) {
+        // retirer si déjà présent
+        state.items = state.items.filter((item) => item.id !== product.id);
+      } else {
+        // ajouter si absent
+        state.items.push(product);
       }
-    },
-    removeFromWishlist(state, action) {
-      state.items = state.items.filter(
-        (item) => item.id !== action.payload
-      );
     },
   },
 });
 
-export const { addToWishlist, removeFromWishlist } =
-  wishlistSlice.actions;
-
+export const { toggleWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;
+
+// Persistance automatique
+export const persistWishlist = (store) => {
+  store.subscribe(() => {
+    const { wishlist } = store.getState();
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  });
+};
