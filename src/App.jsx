@@ -5,6 +5,7 @@ import "./app.css"
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Catalogue from "./pages/Catalogue";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/wishlist" element={<Wishlist />} /> 
         {/* <Route path="/catalogue" element={<Catalogue />} /> */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
